@@ -1,0 +1,39 @@
+{
+    "hero": {
+        "badge": "Software Developer",
+        "title": "Hamza",
+        "description_prefix": "Modern web teknolojileri ile",
+        "description_highlight1": "performanslı",
+        "description_highlight2": "minimalist",
+        "description_suffix": "dijital deneyimler."
+    },
+    "featured": {
+        "label": "Keşfet",
+        "title": "Projeler",
+        "description": "Açık kaynak çalışmalarım ve demolar."
+    },
+    "socials": [
+        {
+            "platform": "github",
+            "url": "https://github.com/hamzzkkaya/"
+        },
+        {
+            "platform": "steam",
+            "url": "https://steamcommunity.com/id/hamzzkkaya/"
+        },
+        {
+            "platform": "contact",
+            "url": "mailto:contact@hamzzkkaya.com"
+        },
+        {
+            "platform": "instagram",
+            "url": "https://www.instagram.com/hamzzkkaya/"
+        }
+    ],
+    "ticker": "HAMZZ ",
+    "ads": {
+        "title": "yazilim.shop",
+        "subtitle": "Premium Scripts",
+        "url": "https://yazilim.shop"
+    }
+}

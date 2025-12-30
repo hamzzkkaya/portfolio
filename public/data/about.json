@@ -1,0 +1,54 @@
+{
+    "header": {
+        "badge": "About Me",
+        "title": "Hamza",
+        "description": "Software Developer based in Turkey. Passionate about building performance-first web applications and creating intuitive user experiences."
+    },
+    "bio": {
+        "title": "Biyografi",
+        "content": "Merhaba! Ben HAMZA, yaratıcı bir tasarımcı ve geliştiriciyim. Dijital dünyada fark yaratan projeler üretmek için tutkuyla çalışıyorum.\n\nMinimalist tasarım prensiplerini modern teknolojilerle birleştirerek yapay zeka çözümleri ile birlikte, kullanıcı deneyimini en üst seviyeye çıkaran çözümler üretiyorum. Her projede özgün ve etkileyici yaklaşımlar geliştirmeye özen gösteriyorum."
+    },
+    "skills": {
+        "title": "Tech Stack",
+        "list": [
+            "WPF",
+            "C#",
+            "TypeScript",
+            "TailwindCSS",
+            "React",
+            "Node.js",
+            "Bun",
+            "MySQL"
+        ]
+    },
+    "timeline": {
+        "title": "Timeline",
+        "items": [
+            {
+                "year": "2025",
+                "title": "Üniversite & Gelişim",
+                "desc": "Üniversite eğitimime devam ederken profesyonel projeler geliştiriyorum."
+            },
+            {
+                "year": "2025",
+                "title": "Oyun Geliştirici",
+                "desc": "Bağımsız oyun projeleri üzerine yoğunlaşıyorum."
+            },
+            {
+                "year": "2024",
+                "title": "Açık Kaynak",
+                "desc": "Topluluk için faydalı araçlar geliştiriyorum."
+            },
+            {
+                "year": "2024",
+                "title": "Freelance",
+                "desc": "Global müşteriler için özel yazılım çözümleri."
+            },
+            {
+                "year": "2023",
+                "title": "Full Stack Başlangıcı",
+                "desc": "Modern web teknolojileri üzerine derinleşme."
+            }
+        ]
+    }
+}

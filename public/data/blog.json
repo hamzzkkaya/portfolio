@@ -1,0 +1,10 @@
+{
+    "header": {
+        "badge": "Blog",
+        "title": "Düşünceler",
+        "description": "Yazılım mimarisi, yeni teknolojiler ve deneyimlerim üzerine notlar."
+    },
+    "items": [
+        "blog-sunumu"
+    ]
+}

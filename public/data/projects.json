@@ -1,0 +1,10 @@
+{
+    "header": {
+        "badge": "Portfolio",
+        "title": "Projelerim",
+        "description": "Açık kaynak katkılarım, kişisel denemelerim ve profesyonel çalışmalarımdan seçkiler."
+    },
+    "items": [
+        "proje-sunumu"
+    ]
+}

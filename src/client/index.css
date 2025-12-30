@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* PERFECT GRAY PALETTE (Neutral) */
+    --bg-main: #0A0A0A;
+    --card-bg: #121212;
+    --card-border: #262626;
+    /* Slightly lighter/thicker appeal */
+
+    --text-main: #EDEDED;
+    --text-muted: #A3A3A3;
+
+    --accent: #3B82F6;
+
+    @apply text-[var(--text-main)] bg-[var(--bg-main)] font-sans;
+  }
+
+  html,
+  body {
+    font-family: 'Outfit', sans-serif;
+    @apply h-full w-full m-0 p-0 overflow-x-hidden;
+  }
+
+  /* CLEAN BACKGROUND - No Dots/Grid as requested */
+  body {
+    background-color: var(--bg-main);
+    background-image: none;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--bg-main);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+  }
+}

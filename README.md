@@ -5,6 +5,8 @@
 Bu proje, modern web teknolojileri kullanılarak geliştirilmiş, yüksek performanslı ve minimalist bir kişisel portfolyo web sitesidir.
 **Google DeepMind'ın Gemini 3 Pro** modeli ile "Vibe Coding" metodolojisi kullanılarak geliştirilmiştir.
 
+> 🌐 **Canlı Önizleme:** Projenin son halini [hamzzkkaya.com](https://hamzzkkaya.com) adresinden inceleyebilirsiniz.
+
 ## 🌟 Özellikler
 
 *   **⚡ Ultra Hızlı:** Backend için **Bun** ve **ElysiaJS** kullanıldı.

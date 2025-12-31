@@ -36,13 +36,6 @@ export default function Navbar() {
                             <Link
                                 key={item.path}
                                 to={item.path}
-                                // Inner Radius: 12px (0.75rem)
-                                // IMPORTANT: justify-start by default, but this can cause centering issues if p-2 aligns left.
-                                // With p-2 and w-full in a 60px closed container, we need to be careful. 
-                                // Best fix: use justifty-center IF closed? No, because we cant detect closed state easily in CSS.
-                                // Solution: Use a fixed width for the icon container (w-10 or w-full) that centers itself?
-                                // Let's try: 'pl-2.5' aligns the icon better in closed state? 44px box inside 56px...
-                                // Or simply 'justify-start' but rely on consistent padding.
                                 className={`group flex items-center gap-3 p-2 rounded-xl transition-all w-full relative h-[40px] overflow-hidden ${path === item.path
                                     ? "text-white"
                                     : "text-[#777] hover:text-white"
@@ -81,14 +74,21 @@ export default function Navbar() {
 
             {/* MOBILE NAVBAR (Bottom Bar) */}
             <nav className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-auto">
-                <div className="bg-[#0A0A0A]/80 backdrop-blur-xl border border-[#333] px-4 py-2 rounded-2xl shadow-2xl flex items-center gap-4">
+                {/* 
+                   - p-1.5 (6px) padding + border-2.
+                   - Items w-12 (48px) h-12 (48px).
+                   - Total Height approx: 6px + 48px + 6px = 60px.
+                   - Matches Chat Widget Toggle Button Size.
+                   - Gap reduced to 2 (8px) for compact look.
+                */}
+                <div className="bg-[#0A0A0A]/80 backdrop-blur-xl border-2 border-[#333] p-1.5 rounded-full shadow-2xl flex items-center gap-2">
                     {navItems.map((item) => (
                         <Link key={item.path} to={item.path} className={`relative flex items-center justify-center w-12 h-12`}>
                             {/* Mobile Active: Accent */}
                             {path === item.path && (
                                 <motion.div
                                     layoutId="nav-bg-mobile"
-                                    className="absolute inset-0 bg-[var(--accent)] rounded-xl shadow-lg"
+                                    className="absolute inset-0 bg-[var(--accent)] rounded-full shadow-lg"
                                     initial={false}
                                     transition={{ type: "spring", stiffness: 400, damping: 30 }}
                                 />

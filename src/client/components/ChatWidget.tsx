@@ -28,7 +28,7 @@ export const ChatWidget: React.FC = () => {
     const [isLoading, setIsLoading] = useState(false);
 
     // Offline / FAQ logic
-    const [isOnline, setIsOnline] = useState<boolean>(true);
+    const [isOnline, setIsOnline] = useState<boolean>(navigator.onLine);
     const [faqs, setFaqs] = useState<FAQ[]>([]);
 
     const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -44,8 +44,24 @@ export const ChatWidget: React.FC = () => {
             .then(setFaqs)
             .catch(err => console.log('FAQ load failed:', err));
 
+        // Listen for network changes
+        const handleOnline = () => setIsOnline(true);
+        const handleOffline = () => setIsOnline(false);
+        window.addEventListener('online', handleOnline);
+        window.addEventListener('offline', handleOffline);
+
         // Check Connectivity (Simulated with a timeout failure or health check)
         const checkConnection = async () => {
+            // Should not check if navigator says offline
+            if (!navigator.onLine) {
+                setIsOnline(false);
+                setMessages([{
+                    role: 'model',
+                    text: "Yapay zeka bağlantısı sağlanamadığı için akıllı seçim modu devreye alındı. Aşağıdan dilediğiniz soruyu seçebilirsiniz. 🔴"
+                }]);
+                return;
+            }
+
             try {
                 // Try to hit the chat endpoint with a dummy ping or just check HEAD
                 const controller = new AbortController();
@@ -58,6 +74,12 @@ export const ChatWidget: React.FC = () => {
                     signal: controller.signal
                 });
                 clearTimeout(timeoutId);
+
+                // Critical: Check if we got HTML back (SPA fallback) -> implies 404 API not found
+                const contentType = res.headers.get("content-type");
+                if (contentType && contentType.includes("text/html")) {
+                    throw new Error("API not found (HTML response)");
+                }
 
                 if (res.ok || res.status === 405 || res.status === 400) {
                     // If we get a response (even error) from server, it's online
@@ -81,6 +103,11 @@ export const ChatWidget: React.FC = () => {
         };
 
         checkConnection();
+
+        return () => {
+            window.removeEventListener('online', handleOnline);
+            window.removeEventListener('offline', handleOffline);
+        };
     }, []);
 
     const scrollToBottom = () => {

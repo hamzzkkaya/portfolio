@@ -135,6 +135,19 @@ const result = await Bun.build({
   ...cliConfig,
 });
 
+// Build Service Worker
+const swEntry = path.join(process.cwd(), "src/sw.ts");
+if (existsSync(swEntry)) {
+  console.log("👷 Building Service Worker...");
+  await Bun.build({
+    entrypoints: [swEntry],
+    outdir,
+    minify: true,
+    target: "browser",
+    naming: "[name].[ext]",
+  });
+}
+
 // Copy public directory to dist
 if (existsSync("public")) {
   console.log("📂 Copying public assets to dist...");

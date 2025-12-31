@@ -1,13 +1,9 @@
 import { Elysia } from 'elysia';
 import { staticPlugin } from '@elysiajs/static';
+import { loadSiteContext, handleChaRequest } from './server/ai';
 
-// Pre-load index.html to ensure it's available and valid
-let indexHtml = "";
-try {
-    indexHtml = await Bun.file('dist/index.html').text();
-} catch (e) {
-    console.error("CRITICAL: Could not read dist/index.html. Run 'bun run build' first.");
-}
+// Load Context on Startup
+loadSiteContext();
 
 const app = new Elysia()
     .use(staticPlugin({

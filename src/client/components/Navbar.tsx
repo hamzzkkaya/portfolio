@@ -44,8 +44,8 @@ export default function Navbar() {
                                 // Let's try: 'pl-2.5' aligns the icon better in closed state? 44px box inside 56px...
                                 // Or simply 'justify-start' but rely on consistent padding.
                                 className={`group flex items-center gap-3 p-2 rounded-xl transition-all w-full relative h-[40px] overflow-hidden ${path === item.path
-                                        ? "text-white"
-                                        : "text-[#777] hover:text-white"
+                                    ? "text-white"
+                                    : "text-[#777] hover:text-white"
                                     }`}
                             >
                                 {/* Active Background: ACCENT (Blue) */}

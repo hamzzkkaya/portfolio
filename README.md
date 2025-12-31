@@ -15,6 +15,11 @@ Bu proje, modern web teknolojileri kullanılarak geliştirilmiş, yüksek perfor
 *   **📝 Özel Markdown Motoru:** Blog ve Projeler için sıfırdan yazılmış; tablo, spoiler, video ve özel bileşenleri destekleyen Markdown işleyici.
 *   **📱 Tam Duyarlı (Responsive):** Mobilden masaüstüne kusursuz görünüm.
 *   **🔄 SPA (Single Page Application):** Gelişmiş client-side routing.
+*   **🤖 Gelişmiş AI Chat Widget:**
+    *   **Akıllı Bağlantı Kontrolü:** AI servisine erişilemezse otomatik olarak **"Akıllı Seçim Modu"**na geçer.
+    *   **Dinamik Karşılama:** Bağlantı durumuna göre (Online/Offline) özelleştirilmiş açılış mesajları sunar.
+    *   **Markdown Desteği:** Cevaplar içerisinde tıklanabilir linkler ve zengin metin formatı sağlar.
+    *   **Estetik Entegrasyon:** Glassmorphism efekti ve Hero bölümüyle uyumlu tasarım dili.
 
 ## 🛠️ Teknoloji Yığını (Tech Stack)
 

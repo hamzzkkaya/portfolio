@@ -1,0 +1,27 @@
+[
+    {
+        "id": "1",
+        "question": "Hamza kimdir?",
+        "answer": "Hamza, modern web teknolojileri konusunda uzmanlaşmış, minimalist ve performans odaklı dijital deneyimler yaratan bir Yazılım Geliştiricisidir."
+    },
+    {
+        "id": "2",
+        "question": "Hangi teknolojileri kullanıyorsun?",
+        "answer": "Genellikle **React**, **TypeScript**, **Tailwind CSS**, **Node.js** ve modern frontend araçlarını (Vite, Next.js) tercih ediyorum."
+    },
+    {
+        "id": "3",
+        "question": "Projelerini nerede görebilirim?",
+        "answer": "Geliştirdiğim açık kaynaklı ve kişisel projelere [Github Profilim](https://github.com/hamzzkkaya) üzerinden veya sitenin [Projeler](/projects) kısmından göz atabilirsin."
+    },
+    {
+        "id": "4",
+        "question": "Seninle nasıl iletişime geçebilirim?",
+        "answer": "Bana [contact@hamzzkkaya.com](mailto:contact@hamzzkkaya.com) mail adresinden doğrudan ulaşabilirsin. İş birlikleri için her zaman açığım! 🚀"
+    },
+    {
+        "id": "5",
+        "question": "Bu site nasıl yapıldı?",
+        "answer": "Bu portfolio sitesi **React**, **TypeScript** ve **Tailwind CSS** kullanılarak, özel animasyonlar ve modern bir tasarım diliyle sıfırdan geliştirildi."
+    }
+]
